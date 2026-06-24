@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(){
+
+    int i, v[6] = {17, 27, 37, 47, 57, 67};
+
+    for(i=5; i>=0; i--){
+        printf("%d ", v[i]);
+    }
+
+    return 0;
+}
