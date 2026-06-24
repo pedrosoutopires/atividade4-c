@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main(){
+
+    int i;
+    float v[5], aux;
+
+    printf("Digite uma sequencia de 5 numeros: ");
+
+    for (i=0; i < 5; i++){
+        scanf("%f", &v[i]);
+    }
+
+    aux = v[0];
+    v[0] = v[4];
+    v[4] = aux;
+
+    aux = v[1];
+    v[1] = v[3];
+    v[3] = aux;
+
+    printf("Sequencia invertida: ");
+
+    for (i=0; i<5; i++){
+        printf("%.2f ", v[i]);
+    }
+
+    return 0;
+}
