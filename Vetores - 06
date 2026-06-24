@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main(){
+
+    int v[15];
+    int numero, i, encontrado = 0;
+
+    printf("Digite os 15 numeros inteiros do vetor: ");
+
+    for (i=0; i<15; i++){
+        scanf("%d", &v[i]);
+    }
+
+    printf("Digite um numero inteiro a ser procurado: ");
+    scanf("%d", &numero);
+
+    for (i=0; i<15; i++){
+        if (numero == v[i]){
+            printf("Numero encontrado, posicao %d\n", i);
+        }
+        else{
+            encontrado++;
+        }
+    }
+        if (encontrado == 15){
+            printf("Numero nao encontrado");
+        }
+
+    return 0;
+}
