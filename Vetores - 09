@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main (){
+
+    int a[8], b[8], c[8], i;
+
+    for (i=0; i<8; i++){
+        printf("Digite o numero %d do vetor a: ", i+1);
+        scanf("%d", &a[i]);
+    }
+    for (i=0; i<8; i++){
+        printf("Digite o numero %d do vetor b: ", i+1);
+        scanf("%d", &b[i]);
+    }
+    for (i=0; i<8; i++){
+        c[i] = a[i] + b[i];
+    }
+    printf("O vetor c e: ");
+    for (i=0; i<8; i++){
+        printf("%d ", c[i]);
+    }
+
+    return 0;
+
+}
