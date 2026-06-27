@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int vetor(int v[10], int numero){
+
+    int i;
+
+    for(i=0; i<10; i++){
+        if (numero == v[i]){
+            return i;
+        }
+    }
+    return -1;
+}
+
+int main(){
+
+    int numero, numerosvetor[10], i, funcao;
+
+    for(i=0; i<10; i++){
+        printf("Digite o numero %d do vetor: ", i+1);
+        scanf("%d", &numerosvetor[i]);
+    }
+
+    printf("Digite um numero do vetor: ");
+    scanf("%d", &numero);
+
+    funcao = vetor(numerosvetor, numero);
+
+    printf("A posicao e: %d", funcao);
+
+    return 0;
+}
