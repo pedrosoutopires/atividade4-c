@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+
+    int i, letras, contador = 0;
+    char palavra[20], invertido[20];
+
+    printf("Digite uma palavra: ");
+    scanf("%19s", palavra);
+
+    letras = strlen(palavra);
+
+    for(i = 0; i < letras; i++){
+        invertido[i] = palavra[letras - 1 - i];
+    }
+
+    invertido[letras] = '\0';
+
+    for(i = 0; i < letras; i++){
+        if(invertido[i] == palavra[i]){
+            contador++;
+        }
+    }
+
+    if(contador == letras){
+        printf("Palindromo");
+    }
+    else{
+        printf("Nao Palindromo");
+    }
+
+    return 0;
+}
