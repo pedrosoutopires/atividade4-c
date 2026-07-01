@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main(){
+
+    int i, j, simetria = 0;
+    float matriz[3][3];
+
+    for(i=0; i<3; i++){
+        for(j=0; j<3; j++){
+            printf("Digite o elemento linha %d coluna %d: ", i+1, j+1);
+            scanf("%f", &matriz[i][j]);
+        }
+    }
+    for(i=0; i<3; i++){
+        for(j=0; j<3; j++){
+            if(matriz[i][j] == matriz[j][i]){
+                simetria++;
+            }
+        }
+    }
+    if(simetria == 9){
+        printf("Matriz Simetrica");
+    }
+    else{
+        printf("Nao e Matriz Simetrica");
+    }
+
+    return 0;
+}
